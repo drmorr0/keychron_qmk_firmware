@@ -1,3 +1,11 @@
+Changes are in `keyboards/keychron/q6_max/ansi_encoder/keymaps/drmorr0`;
+
+1. open up the QMK MSYS pane in Windows Terminal
+2. run `qmk compile` to build a new version
+3. open QMK Toolbox, select the firmware version you built
+4. Put the keyboard switch on cable, unplug, hold down ESC, reconnect, let go -- you should see a yellow message in QMK toolbox
+5. Hit "flash"
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
