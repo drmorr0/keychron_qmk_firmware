@@ -24,6 +24,8 @@ enum layers {
     WIN_FN,
 };
 
+const layer_state_t ALL_LAYERS = 15;
+
 enum drm_macros {
     DRM_0 = SAFE_RANGE,
     DRM_1,
@@ -73,7 +75,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 };
 #endif // ENCODER_MAP_ENABLE
 
-const key_override_t f6_key_override = ko_make_basic(MOD_MASK_GUI, KC_L, KC_F6);  // win+l doesn't lock the screen in nomachine on macos
+const key_override_t f6_key_override = ko_make_with_layers_and_negmods(MOD_MASK_GUI, KC_L, KC_F6, ALL_LAYERS, MOD_MASK_CTRL | MOD_MASK_SHIFT | MOD_MASK_ALT);  // win+l doesn't lock the screen in nomachine on macos
 
 // This globally defines all key overrides to be used
 const key_override_t **key_overrides = (const key_override_t *[]) {
